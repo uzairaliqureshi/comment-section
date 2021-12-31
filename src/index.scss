@@ -1,0 +1,54 @@
+// variables
+
+$moderate-blue: hsl(238, 40%, 52%);
+$soft-Red: hsl(358, 79%, 66%);
+$light-grayish-blue: hsl(239, 57%, 85%);
+$pale-red: hsl(357, 100%, 86%);
+
+$dark-blue: hsl(212, 24%, 26%);
+$grayish-Blue: hsl(211, 10%, 45%);
+$light-gray: hsl(223, 19%, 93%);
+$very-light-gray: hsl(228, 33%, 97%);
+$white: hsl(0, 0%, 100%);
+
+@mixin mediaQuery($device) {
+  @if $device == tablet {
+    @media only screen and (max-width: 685px) {
+      @content;
+    }
+  }
+  @if $device == phone {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @include mediaQuery(tablet) {
+    font-size: 50%;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 80%;
+  }
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: $very-light-gray;
+}

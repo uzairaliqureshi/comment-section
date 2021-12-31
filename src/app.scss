@@ -1,0 +1,21 @@
+.container {
+  min-height: 100vh;
+  margin-inline: auto;
+  max-width: 80rem;
+  padding: 2rem;
+}
+
+img {
+  height: 4rem;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    filter: brightness(80%);
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../index.scss";
+
+.replyBox {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+
+  &__line {
+    grid-area: 1/1/-1/2;
+    margin: 1rem 4rem 4rem;
+    border-radius: 1px;
+    width: 2px;
+    background-color: $light-gray;
+
+    @include mediaQuery(phone) {
+      margin: 0 2rem 3rem 0;
+    }
+  }
+}
